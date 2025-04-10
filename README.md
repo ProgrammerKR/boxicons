@@ -1,163 +1,92 @@
-# boxicons 
-[![Financial Contributors on Open Collective](https://opencollective.com/boxicons/all/badge.svg?label=financial+contributors)](https://opencollective.com/boxicons) [![GitHub issues](https://img.shields.io/github/issues/atisawd/boxicons.svg)](https://github.com/atisawd/boxicons/issues)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/atisawd/boxicons.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fatisawd%2Fboxicons)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/atisawd)
+# ProXIcons
+[![GitHub issues](https://img.shields.io/github/issues/ProgrammerKR/ProXIcons.svg)](https://github.com/ProgrammerKR/ProXIcons/issues)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/ProgrammerKR/ProXIcons.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20ProXIcons:&url=https%3A%2F%2Fgithub.com%2FProgrammerKR%2FProXIcons)
+[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/ProgrammerKR)
 
+_High Quality, Modern, and Lightweight Open Source Icons_
 
+**ProXIcons** is a clean, developer-friendly iconset crafted for modern web, app, and design projects. With over 1500+ icons and a focus on performance, ProXIcons is your go-to icon library for any creative need.
 
-_High Quality web friendly icons_
+## What's New in v1.0.0
 
-'Boxicons' is a carefully designed open source iconset with 1500+ icons. It's crafted to look enrich your website/app experience.
-
-
-_Announcing Boxicons v2.1.3!_
-
-- Fixed the errors with a few svgs, added viewbox
-- Added 34 new icons
-
+- Initial release with 1500+ unique icons
+- Supports regular, solid, and brand variants
+- Includes Web Component for seamless integration
 
 ## Installation
 
-To install via npm, simply do the following:
+To install via npm:
 
 ```bash
-$ npm install boxicons --save
+npm install proxicons --save
 ```
-import the module
 
-```javscript
-import 'boxicons';
+Import the module:
+
+```javascript
+import 'proxicons';
 ```
+
 ## Usage
 
 ### Using via CSS
 
-1. Include the stylesheet on your document's `<head>`
+1. Include the stylesheet in your HTML `<head>`:
 
 ```html
-<head>
-  <link rel="stylesheet" href="boxicons.min.css">
-</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/proxicons@latest/css/proxicons.min.css">
 ```
 
-Instead of installing you may use the remote version 
+2. Use the icons with classes `px`, `pxs`, and `pxl`:
 
 ```html
-<head>
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <!-- or -->
-  <link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
+<i class="px px-lightbulb"></i>
+<i class="pxs px-lightbulb"></i>
+<i class="pxl px-github"></i>
 ```
 
-
-2. To use an icon on your page, add a class 'bx' and seperate class with the icons name with a prefix 'bx-' for regular icons , 'bxs-' for solid icons and 'bxl-' for logos:
-
-```html
-<i class="bx bx-hot"></i>
-<i class="bx bxs-hot"></i>
-<i class="bx bxl-facebook-square"></i>
-```
 ### Using via Web Component
 
-Boxicons includes a Custom Element that makes using icons easy and efficient. To use it, add the `box-icon-element.js` file to the page:
-
 ```html
-<script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/proxicons@latest/dist/proxicons.js"></script>
 ```
 
-To use an icon, add the `<box-icon>` element to the location where the icon should be displayed:
+Example usage:
 
 ```html
-<box-icon name="hot"></box-icon>
+<prox-icon name="lightbulb"></prox-icon>
+<prox-icon type="solid" name="lightbulb"></prox-icon>
+<prox-icon type="logo" name="github"></prox-icon>
 ```
-  To use solid icons or logos add attribute `type` as solid or logo before the name
- ```html
-<box-icon type="solid" name="hot"></box-icon>
-<box-icon type="logo" name="facebook-square"></box-icon>
-```                  
-The `<box-icon>` custom element supports the following attributes:
+
+#### Attributes
 
 ```html
-<box-icon
-    type = "regular|solid|logo"
-    name="adjust|alarms|etc...."
-    color="blue|red|etc..."
-    size="xs|sm|md|lg|cssSize"
+<prox-icon
+    type="regular|solid|logo"
+    name="icon-name"
+    color="blue|red|..."
+    size="xs|sm|md|lg|40px"
     rotate="90|180|270"
     flip="horizontal|vertical"
     border="square|circle"
-    animation="spin|tada|etc..."
-    pull = "left|right"
-></box-icon>
+    animation="spin|tada|..."
+    pull="left|right"
+></prox-icon>
 ```
--   `type`: Should always be first and be one of the following values: `regular`,`solid`, `logo`
--   `name` : (REQUIRED) the name of the icon to be displayed
--   `color`: A color for the icon.
--   `size`: The size for the icon. It supports one of two types of values: 
-    -   One of the following shortcuts: `xs`, `sm`, `md`, `lg`
-    -   A css unit size (ex. `60px`) 
--   `rotate`: one of the following values: `90`, `180`, `270`
--   `flip`:  one of the following values: `horizontal`, `vertical`
--   `border`: one of the following values: `square`, `circle`
--   `animation`: One of the following values: `spin`, `tada`, `flashing`, `burst`, `fade-left`, `fade-right`, `spin-hover`, `tada-hover`, `flashing-hover`, `burst-hover`, `fade-left-hover`, `fade-right-hover`
--   `pull`: one of the following values: `left`,`right`
-The Custom Element class (`BoxIconElement`) exposes the following static members:
-
--   `tagName`: property that holds the HTML element tag name. Default: `box-icon`
--   `defined([tagName])`: Defines the Element in the custom element registry using either the tagName provided on input or the (default) the one defined on the Class.
--   `cdnUrl`: property that holds the URL that will be used to retrieve the images. URL should point to the folder that contains the images. example: `//unpkg.com/boxicons@1.5.2/svg` (no trailing forward slash)
--   `getIconSvg(iconName)`: method used to retrieve the SVG image. Should return a Promise that resolves with the SVG source (String).
-
-
-[Check out all the icons here!](https://boxicons.com)
-
-
 
 ## Contributors
 
-### Code Contributors
-
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/atisawd/boxicons/graphs/contributors"><img src="https://opencollective.com/boxicons/contributors.svg?width=890&button=false" /></a>
-
-### Financial Contributors
-
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/boxicons/contribute)]
-
-#### Individuals
-
-<a href="https://opencollective.com/boxicons"><img src="https://opencollective.com/boxicons/individuals.svg?width=890"></a>
-
-#### Organizations
-
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/boxicons/contribute)]
-
-<a href="https://opencollective.com/boxicons/organization/0/website"><img src="https://opencollective.com/boxicons/organization/0/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/1/website"><img src="https://opencollective.com/boxicons/organization/1/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/2/website"><img src="https://opencollective.com/boxicons/organization/2/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/3/website"><img src="https://opencollective.com/boxicons/organization/3/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/4/website"><img src="https://opencollective.com/boxicons/organization/4/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/5/website"><img src="https://opencollective.com/boxicons/organization/5/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/6/website"><img src="https://opencollective.com/boxicons/organization/6/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/7/website"><img src="https://opencollective.com/boxicons/organization/7/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/8/website"><img src="https://opencollective.com/boxicons/organization/8/avatar.svg"></a>
-<a href="https://opencollective.com/boxicons/organization/9/website"><img src="https://opencollective.com/boxicons/organization/9/avatar.svg"></a>
+Thanks to all contributors who help maintain and improve this project!
 
 ## License
 
-- The icons (.svg) files are free to download and are licensed under CC 4.0 By downloading it is assumed that you agree with the terms mentioned in CC 4.0.
-- The fonts files are licensed under SIL OFL 1.1.
-- Attribution is not required but is appreciated.
-- Other files which are not fonts or icons are licensed under the MIT License.
+- Icons: CC 4.0
+- Fonts: SIL OFL 1.1
+- Other Files: MIT
 
-[You can read more about the license here!](https://boxicons.com/get-started#license)
-
+[Read the full license here](https://github.com/ProgrammerKR/ProXIcons/blob/main/LICENSE)
 
 ## Contributing
 
-Pull requests are the way to go here. I apologise in advance for the slow action on pull requests and issues.
-
-Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/atisawd/boxicons/blob/master/README.md)
+Pull requests and contributions are welcome! Caught an issue or have an idea? [Open an issue](https://github.com/ProgrammerKR/ProXIcons/issues) or [edit the README](https://github.com/ProgrammerKR/ProXIcons/edit/main/README.md)
