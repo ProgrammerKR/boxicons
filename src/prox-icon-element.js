@@ -77,17 +77,17 @@ ${transformationsCss}
 /**
  * A Custom Element for displaying icon
  */
-export class BoxIconElement extends HTMLElement {
+export class ProXIconElement extends HTMLElement {
   static get cdnUrl() {
       // BUILD.DATA.VERSION is injected by webpack during a build.
       // Value is same as package.json#version property.
-    return `//unpkg.com/boxicons@${BUILD.DATA.VERSION}/svg`;
+    return `//unpkg.com/proxicons@${BUILD.DATA.VERSION}/svg`;
   }
     /**
      * The html tag name to be use
      * @type {String}
      */
-  static get tagName() { return 'box-icon'; }
+  static get tagName() { return 'prox-icon'; }
 
   static get observedAttributes() {
     return [
@@ -278,4 +278,4 @@ function handleSizeChange(inst, oldVal, newVal) {
   }
 }
 
-export default BoxIconElement;
+export default ProXIconElement;
