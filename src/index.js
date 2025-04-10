@@ -1,6 +1,6 @@
-import { BoxIconElement } from './box-icon-element';
+import { ProXIconElement } from './prox-icon-element';
 
-export { BoxIconElement };
-export default BoxIconElement;
+export { ProXIonElement };
+export default ProXIconElement;
 
-BoxIconElement.define();
+ProXIonElement.define();
