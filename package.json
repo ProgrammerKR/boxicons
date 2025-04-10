@@ -1,23 +1,23 @@
 {
-  "name": "boxicons",
-  "version": "2.1.4",
-  "description": "High Quality Web Icons",
+  "name": "proxicons",
+  "version": "1.0.0",
+  "description": "ProXIcons - An open-source high-quality icon library for modern web and app development",
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --hot --open",
-    "build": "webpack -p ",
-    "optimize-svg": "svgo --config=svgo.config.js -f svg/regular && svgo --config=svgo.config.js -f svg/logos && svgo --config=svgo.config.js -f svg/solid"
+    "build": "webpack -p",
+    "optimize-svg": "svgo --config=svgo.config.js -f svg/line && svgo --config=svgo.config.js -f svg/fill && svgo --config=svgo.config.js -f svg/duotone"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atisawd/boxicons.git"
+    "url": "git+https://github.com/ProgrammerKR/ProXIcons.git"
   },
   "author": {
-    "name": "Atisa",
-    "email": "atisawd@gmail.com",
-    "url": "https://github.com/atisawd"
+    "name": "Kanishk Raj",
+    "email": "programmerkrofficial@gmail.com",
+    "url": "https://github.com/ProgrammerKR"
   },
   "bugs": {
-    "url": "https://github.com/atisawd/boxicons/issues"
+    "url": "https://github.com/ProgrammerKR/ProXIcons/issues"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.0.2",
@@ -54,6 +54,6 @@
   },
   "bundleDependencies": false,
   "license": "(CC-BY-4.0 OR OFL-1.1 OR MIT)",
-  "main": "./dist/boxicons.js",
-  "style": "./css/boxicons.css"
+  "main": "./dist/proxicons.js",
+  "style": "./css/proxicons.css"
 }
